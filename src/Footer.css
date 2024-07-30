@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer{
+    font-size: 12px;
+    text-align: left;
+    padding: 10px;
+    transform: translateY(2440%);
+    color: hsla(25, 14%, 74%, 0.95);
+}

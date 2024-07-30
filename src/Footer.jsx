@@ -1,7 +1,8 @@
+import "./Footer.css"
 
 function Footer() {
     return(
-        <footer>
+        <footer className="footer">
             <p>&copy; {new Date().getFullYear()} Nefedov Evgeni</p>
         </footer>
     );

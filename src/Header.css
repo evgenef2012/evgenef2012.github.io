@@ -1,18 +1,90 @@
-.header {
-    background-color: #dbdbdb;
-    padding: 2px;
-    text-align: center;
-    color: rgb(59, 59, 59);
-  }
-  
-  /* Styles for the h1 element inside the header */
-  .header-title {
-    font-size: 2.5em;
+* {
     margin: 0;
-  }
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: start;
+    width: 220px;
+    height: 100vh;
+    padding: 10px 10px 0px; 
+    background-color: hsla(28, 18%, 48%, 0.1);
+}
+
+.header_all_comp {
+    transform: translateY(50px) translateX(-5px);
+}
+
+.header-title{
+    position: relative;
+    font-weight: lighter;
+    font-size: 135px;
+    letter-spacing: -16px;
+    color: hsla(25, 14%, 74%, 0.5);
+    transform: translateX(-5px);
+}
+
+.header-title_2 {
+    position: relative;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 6px;
+    transform:translateY(-30px) translateX(5px);
+    color: hsl(25, 5%, 25%);
+}
+
+.header-title_3 {
+    font-size: 30px;
+    font-weight: lighter;
+    letter-spacing: 3.2px;
+    color: hsla(25, 14%, 74%, 0.5);
+    transform: translateY(-35px) translateX(3px);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid hsla(20, 5%, 25%, 0.50);
+    margin: 20px 2px;
+    transform: translateX(-3px);
+}
+
+.link_container {
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: .75px;
+    line-height: 65px;
+    list-style-type: none;
+    transform: translateX(64px) translateY(0px);
+    color: hsl(25, 5%, 25%);
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: hsla(20, 5%, 25%, 0.605);
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+    
+    
+    
   
-  /* Styles for the p element inside the header */
-  .header-subtitle {
-    font-size: 1.2em;
-    margin: 10px 0 0;
-  }
