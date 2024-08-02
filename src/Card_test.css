@@ -1,12 +1,12 @@
 .card{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* padding: 10px; */
     margin: 0px;
     text-align: center;
     line-height: 0.2em;
     max-width: 250px;
     background-color: rgba(0, 0, 0, 0.1);
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .card .card-image{

@@ -1,7 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+}
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  background-color: hsl(40, 50%, 97%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(15, 40%, 98%);
 }
+    
+
+body, p, h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header{
+    flex-grow: 1;
+}
+.container {
+    display: flex;
+    flex-grow: 4;
+    justify-content: center;
+}
+    
+.thumbnails-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 1rem
+}
+    
+    
