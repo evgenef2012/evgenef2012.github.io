@@ -1,8 +1,8 @@
-
-
-/* .footer{
-    font-size: 12px;
-    text-align: left;
-    padding: 10px;
-    color: hsla(25, 14%, 74%, 0.95);
-} */
+.footer {
+    color: solid black;
+    font-size: .7rem;
+    letter-spacing: .03rem;
+    font-weight: light;
+}
+    
+    

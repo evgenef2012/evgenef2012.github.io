@@ -1,8 +1,8 @@
-.thumb_arch {
+.thumb_med {
     display: flex;
     flex-direction: column;
     align-items: left;
-    background-color: rgb(236, 226, 218);
+    background-color: rgb(236, 226, 218)
 }
     
     

@@ -3,11 +3,14 @@ import './Thumb_Arch_Main.css'
 
 function Thumb_Arch_Main () {
     return (
-        <div className='thumb_arch'>
-            <a href='arch-projects' className='arch-link'>
-                <div className='thumb_arch_title'>Architectural visualization</div>
-            </a>
-        </div>
+        <main className='thumb_all'>
+            <div className='thumb_arch_title'>Architectural visualization</div>
+                <div className='thumb_arch'>
+                    <a href='arch-projects' className='arch-link'></a>
+                    <img className="thumb_arch_image" src="https://studio-bonsai.com/wp-content/uploads/2023/12/lo-6-1.jpg" alt="project preview"></img>
+                </div>
+        </main>
+        
     );
 }
 

@@ -68,25 +68,122 @@ body, p, h1, h2, h3, h4, h5, h6 {
 
 .layout {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content:flex-start;
+    min-height: 99dvh;
+    
+    
 }
 
-.header{
-    flex-grow: 1;
-}
-.container {
+.header_2 {
+    /* border: 2px solid black; */
     display: flex;
-    flex-grow: 4;
+    flex-grow: 0.5;
+    min-width: 20rem;
+    max-width: 350px;
+}
+
+.container {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
     justify-content: center;
+    max-width: 1200px;
+}
+
+.about {
+    display: flex;
+    flex-grow: 0.5;
+    /* border: 1px solid black; */
+    min-width: 20rem;
+    max-width: 350px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 1.35rem;
+    width: 11rem;
+    text-align: center;
+    /* border: 1px solid black; */
 }
     
 .thumbnails-container {
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1200px;
-    gap: 1rem
+    padding:0;
+    gap: 2rem;
 }
     
+.thumb_all {
+    /* border: 1px solid black; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.thumb_arch_title {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1.35rem;
+    left: 0;
+}
     
+.thumb_arch {
+    display: flex;
+    justify-content: flex-start;
+    height: 100dvh;
+    width: 28.3rem;
+    position:relative;
+    overflow: hidden;
+    clip-path:polygon(0% 0%, 100% 0%, 100% 95%, 0% 95%);
+    
+}    
+    
+.thumb_arch_image{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    overflow: hidden;
+    transform: translate(-66.5%, -49%) scale(1.5);
+    filter: saturate(80%) brightness(100%) opacity(60%);
+    transition: filter 0.4s ease;
+    
+}
+
+.thumb_arch_image:hover {
+    filter: saturate(100%) brightness(110%) opacity(100%);
+}
+
+.thumb_med {
+    display: flex;
+    justify-content: flex-start;
+    height: 100dvh;
+    width: 28.3rem;
+    position:relative;
+    overflow: hidden;
+    clip-path:polygon(0% 0%, 100% 0%, 100% 95%, 0% 95%);
+}  
+
+.thumb_med_image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    overflow: hidden;
+    transform: translate(-20%, -54%) scale(1.28);
+    filter: saturate(40%) brightness(90%) opacity(40%);
+    transition: filter 0.4s ease;
+}
+    
+.thumb_med_image:hover {
+    filter: saturate(70%) brightness(105%) opacity(100%);
+}

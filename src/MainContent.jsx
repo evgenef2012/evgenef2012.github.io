@@ -1,6 +1,6 @@
 import React from 'react'
-import Crad_test from './Card_test.jsx'
 import Thumb_Arch_Main from './Thumb_Arch_Main.jsx';
+import Thumb_Med_Main from './Thumb_Med_Main.jsx';
 import './MainContent.css'
 
 const MainContent = () => {
@@ -8,15 +8,12 @@ const MainContent = () => {
       <main className="container">
         <div className="thumbnails-container">
           <Thumb_Arch_Main/>
-          <Thumb_Arch_Main/>
-          {/* <Crad_test/>
-          <Crad_test/>
-          {/* <Crad_test/>
-          <Crad_test/> */} 
+          <Thumb_Med_Main/>
         </div>
       </main>
     );
   };
+          
         
   
   export default MainContent
