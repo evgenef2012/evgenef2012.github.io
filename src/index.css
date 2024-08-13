@@ -81,7 +81,8 @@ body, p, h1, h2, h3, h4, h5, h6 {
 .header_2 {
     /* border: 2px solid black; */
     display: flex;
-    flex-grow: 0.5;
+    flex-grow: 0;
+    flex-shrink: 0;
     min-width: 20rem;
     max-width: 350px;
 }
@@ -104,14 +105,17 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .about {
-    border: 1px solid black;
-    width: 350px;
+    /* border: 1px solid black; */
+    min-width: 20rem;
+    max-width: 350px;
     height: 100vh;
+    flex-grow: 0;
+    flex-shrink: 0;
     overflow-y: hidden;
 }
 
 .ag_Container {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     padding-left: 3rem;
     padding-right: 3rem;
     display: flex;
@@ -124,7 +128,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .ag_thumb {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 150px;
     height:calc(100% - 1.35rem);
     margin-left: 1px;
@@ -134,7 +138,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
     /* clip-path:polygon(0% 0%, 100% 0%, 100% 95%, 0% 95%); */
 }
 
-.arch_gl_thumb{
+.arch_gl_thumb {
     width: 100%;
     height: 100%;
     object-fit:cover;
@@ -142,6 +146,81 @@ body, p, h1, h2, h3, h4, h5, h6 {
     top: 0; 
     left: 0; 
 }
+
+.agp_container {
+    /* border: 1px solid black; */
+    padding-left:3rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    max-width: 1200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+    
+    
+
+.agp_title {
+    align-self: start;
+    /* border: 1px solid black; */
+}
+
+.agp_main_image_container{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    max-width: 100%;
+    max-width: 974px;
+    max-height: 75vh;
+    /* overflow: hidden; */
+}
+    
+    
+    
+
+.agp_main_image{
+    position: relative;
+    align-self: center; 
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+}
+    
+
+.agp_thumbs_container{
+    /* border: 1px solid black; */
+    display:flex;
+    flex-direction: row;
+    height: 13vh;
+    justify-content: space-between;
+    flex-grow:0;
+    flex-shrink: 1;
+    gap: 2px;
+}
+
+.agp_thumb{
+    /* border: 1px solid black; */
+    /* background-color: #ff6767; */
+    flex-grow: 1;
+    height: 110px;
+    width: 160px;
+}
+    
+
+.agp_thumb_image{
+    position: relative;
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+}
+    
+     
 
 .footer {
     position: absolute;

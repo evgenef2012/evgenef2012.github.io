@@ -5,6 +5,7 @@ import MainContent from './MainContent.jsx'
 import ArchGallery from './ArchGallery.jsx'
 import Arch_Project_01 from './Arch_Gallery/Arch_Gallery_Project_01.jsx'
 import About from './About.jsx'
+// import ArImage from './Arch_Gallery/ArchImages/Arabov_C_01_Day_Opened.jpg';
 import './App.css'
 
 
