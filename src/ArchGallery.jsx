@@ -4,7 +4,7 @@ import  { ThumbData }  from './Arch_Gallery/ArchThumbData.js';
 import './ArchGallery.css'
 
 
-function ArchGallery ({onArchGllThumb_01_Click, onArchGllThumb_02_Click}) {
+function ArchGallery ({onArchGllThumb_01_Click, onArchGllThumb_02_Click, onArchGllThumb_03_Click}) {
 
     return (
         <div className='ag_Container' >
@@ -13,7 +13,7 @@ function ArchGallery ({onArchGllThumb_01_Click, onArchGllThumb_02_Click}) {
             <div className='ag_thumb'>
                 <ArchGllThumb onClick={onArchGllThumb_02_Click}{...ThumbData[1]}/></div>
             <div className='ag_thumb'>
-                <ArchGllThumb onClick={onArchGllThumb_01_Click}{...ThumbData[2]}/></div>
+                <ArchGllThumb onClick={onArchGllThumb_03_Click}{...ThumbData[2]}/></div>
             <div className='ag_thumb'>
                 <ArchGllThumb onClick={onArchGllThumb_01_Click}{...ThumbData[3]}/></div>
             <div className='ag_thumb'>
