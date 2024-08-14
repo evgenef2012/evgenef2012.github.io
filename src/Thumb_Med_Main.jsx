@@ -4,13 +4,13 @@ import './Thumb_Med_Main.css'
 
 function Thumb_Med_Main () {
     return (
-        <main className='thumb_all'>
+        <div className='thumb_all'>
             <div className='thumb_arch_title'>Product visualization</div>
-                <div className='thumb_med'>
-                    <a href='arch-projects' className='med-link'></a>
-                    <img className="thumb_med_image" src ={imageSrc} alt="project preview"></img>
-                </div>
-        </main>
+            <div className='thumb_med'>
+                <a href='arch-projects' className='med-link'></a>
+                <img className="thumb_med_image" src ={imageSrc} alt="project preview"></img>
+            </div>
+        </div>
         
     );
 }
