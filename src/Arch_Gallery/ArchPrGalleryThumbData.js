@@ -19,6 +19,27 @@ import ArchPr03Thmb03 from './ArchThumb/Skiathos_C_19A_THUMB.png'
 import ArchPr03Thmb04 from './ArchThumb/Skiathos_C_17_THUMB.png'
 import ArchPr03Thmb05 from './ArchThumb/Skiathos_C_07_THUMB.png'
 import ArchPr03Thmb06 from './ArchThumb/Skiathos_Int_C_Int_12_V2_THUMB.png'
+//project 04
+import ArchPr04Thmb01 from './ArchThumb/HMBG_C_02_Alt_01_day_THUMB.png'
+import ArchPr04Thmb02 from './ArchThumb/HMBG_C_04_day_THUMB.png'
+import ArchPr04Thmb03 from './ArchThumb/HMBG_C_05_Sunset_THUMB.png'
+import ArchPr04Thmb04 from './ArchThumb/HMBG_C_17_day_THUMB.png'
+import ArchPr04Thmb05 from './ArchThumb/HMBG_Int_C_01_THUMB.png'
+import ArchPr04Thmb06 from './ArchThumb/HMBG_Int_C_06_THUMB.png'
+//project 05
+import ArchPr05Thmb01 from './ArchThumb/David_C_002_Bld_23_25_27_Night_V2_THUMB.png'
+import ArchPr05Thmb02 from './ArchThumb/David_C_002_Bld_23_25_27_Day_V2_THUMB.png'
+import ArchPr05Thmb03 from './ArchThumb/David_C_001_Bld_25_V2_THUMB.png'
+import ArchPr05Thmb04 from './ArchThumb/David_C_001_Night_V2_THUMB.png'
+import ArchPr05Thmb05 from './ArchThumb/David_C_003_Dusk_Bld_23_25_27_V2_THUMB.png'
+import ArchPr05Thmb06 from './ArchThumb/David_C_003_Bld_23_25_27_InCar_V2_THUMB.png'
+//project 06
+import ArchPr06Thmb01 from './ArchThumb/Moriel_C_01C_Evening_THUMB.png'
+import ArchPr06Thmb02 from './ArchThumb/Moriel_C_05_DayOption_THUMB.png'
+import ArchPr06Thmb03 from './ArchThumb/Moriel_C_05_Night_THUMB.png'
+import ArchPr06Thmb04 from './ArchThumb/Moriel_C_04D_Day_THUMB.png'
+import ArchPr06Thmb05 from './ArchThumb/Moriel_C_02_Day_THUMB.png'
+import ArchPr06Thmb06 from './ArchThumb/Moriel_C_03B_Day_THUMB.png'
 
 export const ArchPrThumbData = [
     {
@@ -113,5 +134,101 @@ export const ArchPr03ThumbData = [
     {
         image : ArchPr03Thmb06,
         title : 'Skiathos Villa',
+    },
+];
+
+export const ArchPr04ThumbData = [
+    {
+        image : ArchPr04Thmb01,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Thmb02,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Thmb03,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Thmb04,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Thmb05,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Thmb06,
+        title : 'Hamburger Villa',
+    },
+];
+
+export const ArchPr05ThumbData = [
+    {
+        image : ArchPr05Thmb01,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Thmb02,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Thmb03,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Thmb04,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Thmb05,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Thmb06,
+        title : 'David st.',
+    },
+];
+
+export const ArchPr06ThumbData = [
+    {
+        image : ArchPr06Thmb01,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Thmb02,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Thmb03,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Thmb04,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Thmb05,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Thmb06,
+        title : 'Moriel Villa',
     },
 ];

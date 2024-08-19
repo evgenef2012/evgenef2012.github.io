@@ -19,6 +19,27 @@ import ArchPr03Img03 from './ArchImages/Skiathos_C_19A.jpg'
 import ArchPr03Img04 from './ArchImages/Skiathos_C_17.jpg'
 import ArchPr03Img05 from './ArchImages/Skiathos_C_07.jpg'
 import ArchPr03Img06 from './ArchImages/Skiathos_Int_C_Int_12_V2.jpg'
+//Project 04
+import ArchPr04Img01 from './ArchImages/HMBG_C_02_Alt_01_day.jpg'
+import ArchPr04Img02 from './ArchImages/HMBG_C_04_day.jpg'
+import ArchPr04Img03 from './ArchImages/HMBG_C_05_Sunset.jpg'
+import ArchPr04Img04 from './ArchImages/HMBG_C_17_day.jpg'
+import ArchPr04Img05 from './ArchImages/HMBG_Int_C_01.jpg'
+import ArchPr04Img06 from './ArchImages/HMBG_Int_C_06.jpg'
+//Project 05
+import ArchPr05Img01 from './ArchImages/David_C_002_Bld_23_25_27_Night_V2.jpg'
+import ArchPr05Img02 from './ArchImages/David_C_002_Bld_23_25_27_Day_V2.jpg'
+import ArchPr05Img03 from './ArchImages/David_C_001_Bld_25_V2.jpg'
+import ArchPr05Img04 from './ArchImages/David_C_001_Night_V2.jpg'
+import ArchPr05Img05 from './ArchImages/David_C_003_Dusk_Bld_23_25_27_V2.jpg'
+import ArchPr05Img06 from './ArchImages/David_C_003_Bld_23_25_27_InCar_V2.jpg'
+//Project 06
+import ArchPr06Img01 from './ArchImages/Moriel_C_01C_Evening.jpg'
+import ArchPr06Img02 from './ArchImages/Moriel_C_05_DayOption.jpg'
+import ArchPr06Img03 from './ArchImages/Moriel_C_05_Night.jpg'
+import ArchPr06Img04 from './ArchImages/Moriel_C_04D_Day.jpg'
+import ArchPr06Img05 from './ArchImages/Moriel_C_02_Day.jpg'
+import ArchPr06Img06 from './ArchImages/Moriel_C_03B_Day.jpg'
 
 export const ArchPrImgData = [
     {
@@ -113,6 +134,102 @@ export const ArchPr03ImgData = [
     {
         image : ArchPr03Img06,
         title : 'Skiathos Villa',
+    },
+];
+
+export const ArchPr04ImgData = [
+    {
+        image : ArchPr04Img01,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Img02,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Img03,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Img04,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Img05,
+        title : 'Hamburger Villa',
+    },
+    
+    {
+        image : ArchPr04Img06,
+        title : 'Hamburger Villa',
+    },
+];
+
+export const ArchPr05ImgData = [
+    {
+        image : ArchPr05Img01,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Img02,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Img03,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Img04,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Img05,
+        title : 'David st.',
+    },
+    
+    {
+        image : ArchPr05Img06,
+        title : 'David st.',
+    },
+];
+
+export const ArchPr06ImgData = [
+    {
+        image : ArchPr06Img01,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Img02,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Img03,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Img04,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Img05,
+        title : 'Moriel Villa',
+    },
+    
+    {
+        image : ArchPr06Img06,
+        title : 'Moriel Villa',
     },
 ];
    

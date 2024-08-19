@@ -1,30 +1,38 @@
-import React from 'react';
-import ArchGllThumb from './Arch_Gallery/Arch_Gallery_Thumb.jsx';
-import  { ThumbData }  from './Arch_Gallery/ArchThumbData.js';
-import './ArchGallery.css'
+import React from "react";
+import ArchGllThumb from "./Arch_Gallery/Arch_Gallery_Thumb.jsx";
+import { ThumbData } from "./Arch_Gallery/ArchThumbData.js";
+import "./ArchGallery.css";
 
+function ArchGallery({
+  onArchGllThumb_01_Click,
+  onArchGllThumb_02_Click,
+  onArchGllThumb_03_Click,
+  onArchGllThumb_04_Click,
+  onArchGllThumb_05_Click,
+  onArchGllThumb_06_Click,
+}) {
+  return (
+    <div className="ag_Container">
+      <div className="ag_thumb">
+        <ArchGllThumb onClick={onArchGllThumb_01_Click} {...ThumbData[0]} />
+      </div>
+      <div className="ag_thumb">
+        <ArchGllThumb onClick={onArchGllThumb_02_Click} {...ThumbData[1]} />
+      </div>
+      <div className="ag_thumb">
+        <ArchGllThumb onClick={onArchGllThumb_03_Click} {...ThumbData[2]} />
+      </div>
+      <div className="ag_thumb">
+        <ArchGllThumb onClick={onArchGllThumb_04_Click} {...ThumbData[3]} />
+      </div>
+      <div className="ag_thumb">
+        <ArchGllThumb onClick={onArchGllThumb_05_Click} {...ThumbData[4]} />
+      </div>
+      <div className="ag_thumb">
+        <ArchGllThumb onClick={onArchGllThumb_06_Click} {...ThumbData[5]} />
+      </div>
+    </div>
+  );
+}
 
-function ArchGallery ({onArchGllThumb_01_Click, onArchGllThumb_02_Click, onArchGllThumb_03_Click}) {
-
-    return (
-        <div className='ag_Container' >
-            <div className='ag_thumb'>
-                <ArchGllThumb onClick={onArchGllThumb_01_Click}{...ThumbData[0]}/></div>
-            <div className='ag_thumb'>
-                <ArchGllThumb onClick={onArchGllThumb_02_Click}{...ThumbData[1]}/></div>
-            <div className='ag_thumb'>
-                <ArchGllThumb onClick={onArchGllThumb_03_Click}{...ThumbData[2]}/></div>
-            <div className='ag_thumb'>
-                <ArchGllThumb onClick={onArchGllThumb_01_Click}{...ThumbData[3]}/></div>
-            <div className='ag_thumb'>
-                <ArchGllThumb onClick={onArchGllThumb_01_Click}{...ThumbData[4]}/></div>
-            <div className='ag_thumb'>
-                <ArchGllThumb onClick={onArchGllThumb_01_Click}{...ThumbData[5]}/></div>
-        </div>
-    );
-};
-                
-            
-        
-            
 export default ArchGallery;
