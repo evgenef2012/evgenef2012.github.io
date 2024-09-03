@@ -3,6 +3,7 @@ import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import MainContent from './MainContent.jsx'
 import ArchGallery from './ArchGallery.jsx'
+import ProdGallery from './Product_Viz_Gallery/ProdGallery.jsx'
 import Arch_Project_01 from './Arch_Gallery/Arch_Gallery_Project_01.jsx'
 import Arch_Project_02 from './Arch_Gallery/Arch_Gallery_Project_02.jsx'
 import Arch_Project_03 from './Arch_Gallery/Arch_Gallery_Project_03.jsx'
@@ -44,42 +45,44 @@ function App() {
               onArchGllThumb_04_Click={() => handleViewChange('pr_04_gallery')}
               onArchGllThumb_05_Click={() => handleViewChange('pr_05_gallery')}
               onArchGllThumb_06_Click={() => handleViewChange('pr_06_gallery')}
-              
-            />  
-            ) : view === 'pr_01_gallery' ? (
-            <Arch_Project_01 
-              onBackClick={() => handleViewChange('arch_gallery')}
-            />  
-            ): view === 'pr_02_gallery' ? (
-            <Arch_Project_02 
-              onBackClick={() => handleViewChange('arch_gallery')}
-            />  
-            ): view === 'pr_03_gallery' ? (
-            <Arch_Project_03 
-              onBackClick={() => handleViewChange('arch_gallery')}
-            />  
-            ): view === 'pr_04_gallery' ? (
-            <Arch_Project_04 
-              onBackClick={() => handleViewChange('arch_gallery')}
-            />
-            ): view === 'pr_05_gallery' ? (
-            <Arch_Project_05 
-              onBackClick={() => handleViewChange('arch_gallery')}
-            />
-            ): view === 'pr_06_gallery' ? (
-            <Arch_Project_06
-              onBackClick={() => handleViewChange('arch_gallery')}
-            />
-            ): null}
+              />  
+              ) : view === 'pr_01_gallery' ? (
+              <Arch_Project_01 
+                onBackClick={() => handleViewChange('arch_gallery')}
+              />  
+              ): view === 'pr_02_gallery' ? (
+              <Arch_Project_02 
+                onBackClick={() => handleViewChange('arch_gallery')}
+              />  
+              ): view === 'pr_03_gallery' ? (
+              <Arch_Project_03 
+                onBackClick={() => handleViewChange('arch_gallery')}
+              />  
+              ): view === 'pr_04_gallery' ? (
+              <Arch_Project_04 
+                onBackClick={() => handleViewChange('arch_gallery')}
+              />
+              ): view === 'pr_05_gallery' ? (
+              <Arch_Project_05 
+                onBackClick={() => handleViewChange('arch_gallery')}
+              />
+              ): view === 'pr_06_gallery' ? (
+              <Arch_Project_06
+                onBackClick={() => handleViewChange('arch_gallery')}
+              />
+              ): view === 'Med_gallery' ? (
+              <ProdGallery/>  
+              ): null}
+            </div>
+            <div className = 'about'>
+              <About/>
+            </div>  
           </div>
-          <div className = 'about'>
-            <About/>
-          </div>  
         </div>
-      </div>
-    );
-}
-             
-            
-export default App
+      );
+  }
+               
+              
+  export default App
+              
       
