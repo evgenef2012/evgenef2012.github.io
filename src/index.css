@@ -209,6 +209,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
     flex-grow: 1;
     height: 110px;
     width: 160px;
+    overflow: hidden;
 }
     
 
@@ -223,7 +224,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
      
 
 .footer {
-    position: absolute;
+    position:fixed;
     bottom: 1.35rem;
     width: 11rem;
     text-align: center;

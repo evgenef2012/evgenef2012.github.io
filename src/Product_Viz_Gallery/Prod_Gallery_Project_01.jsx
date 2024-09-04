@@ -1,0 +1,39 @@
+import { useState } from "react";
+import Prod_Gallery_Project_Thumb from "./Prod_Gallery_Project_Thumb.jsx";
+import Prod_Gallery_Project_Image from "./Prod_Gallery_Project_Image.jsx";
+import { ProdPrThumbData } from "./ProdPrGalleryThumbData.js";
+import { ProdPrImgData } from "./ProdPrGalleryImageData.js";
+import "../Arch_Gallery/Arch_Gallery_Project.css";
+
+function Prod_Project_01({ onBackClick }) {
+  const [currentImage, setCurrentImage] = useState(ProdPrImgData[0]);
+
+  const handleThumbClick = (imageIndex) => {
+    setCurrentImage(ProdPrImgData[imageIndex]);
+  };
+
+  return (
+    <div className="agp_container">
+      <div className="agp_title">{ProdPrImgData[0].title}</div>
+      <div className="agp_main_image_container">
+        <Prod_Gallery_Project_Image {...currentImage} />
+      </div>
+      <div className="agp_thumbs_container">
+        {ProdPrThumbData.map((thumb, index) => (
+          <div
+            className="agp_thumb"
+            key={index}
+            onClick={() => handleThumbClick(index)}
+          >
+            <Prod_Gallery_Project_Thumb {...thumb} />
+          </div>
+        ))}
+      </div>
+      <div className="agp_back_button" onClick={onBackClick}>
+        BACK
+      </div>
+    </div>
+  );
+}
+
+export default Prod_Project_01;
