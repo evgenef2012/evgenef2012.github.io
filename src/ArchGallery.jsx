@@ -4,6 +4,9 @@ import { ThumbData } from "./Arch_Gallery/ArchThumbData.js";
 import "./ArchGallery.css";
 
 function ArchGallery({
+  onThumbHover,
+  onThumbLeave,
+  onThumbClick,
   onArchGllThumb_01_Click,
   onArchGllThumb_02_Click,
   onArchGllThumb_03_Click,
@@ -13,26 +16,76 @@ function ArchGallery({
 }) {
   return (
     <div className="ag_Container">
-      <div className="ag_thumb">
-        <ArchGllThumb onClick={onArchGllThumb_01_Click} {...ThumbData[0]} />
+      <div className="ag_thumb" 
+        onMouseEnter={()=> onThumbHover(0)} 
+        onMouseLeave={onThumbLeave}
+      >
+        <ArchGllThumb 
+          onClick={() => {
+            onThumbClick(0);
+          }} 
+          {...ThumbData[0]} 
+        />
       </div>
-      <div className="ag_thumb">
-        <ArchGllThumb onClick={onArchGllThumb_02_Click} {...ThumbData[1]} />
+      <div className="ag_thumb" 
+        onMouseEnter={()=> onThumbHover(1)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ArchGllThumb 
+          onClick={() => {
+            onThumbClick(1);
+          }} 
+          {...ThumbData[1]} 
+        />
       </div>
-      <div className="ag_thumb">
-        <ArchGllThumb onClick={onArchGllThumb_03_Click} {...ThumbData[2]} />
+      <div className="ag_thumb" 
+        onMouseEnter={()=> onThumbHover(2)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ArchGllThumb 
+          onClick={() => {
+            onThumbClick(2);
+          }} 
+          {...ThumbData[2]}
+        />
       </div>
-      <div className="ag_thumb">
-        <ArchGllThumb onClick={onArchGllThumb_04_Click} {...ThumbData[3]} />
+      <div className="ag_thumb" 
+        onMouseEnter={()=> onThumbHover(3)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ArchGllThumb 
+          onClick={() => {
+            onThumbClick(3);
+          }} 
+          {...ThumbData[3]} 
+        />
       </div>
-      <div className="ag_thumb">
-        <ArchGllThumb onClick={onArchGllThumb_05_Click} {...ThumbData[4]} />
+      <div className="ag_thumb" 
+        onMouseEnter={()=> onThumbHover(4)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ArchGllThumb 
+          onClick={() => {
+            onThumbClick(4);
+          }}  
+          {...ThumbData[4]} 
+        />
       </div>
-      <div className="ag_thumb">
-        <ArchGllThumb onClick={onArchGllThumb_06_Click} {...ThumbData[5]} />
+      <div className="ag_thumb" 
+        onMouseEnter={()=> onThumbHover(5)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ArchGllThumb 
+          onClick={() => {
+            onThumbClick(5);
+          }} 
+          {...ThumbData[5]} 
+        />
       </div>
     </div>
   );
 }
+           
 
 export default ArchGallery;
+            

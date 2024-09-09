@@ -112,7 +112,26 @@ body, p, h1, h2, h3, h4, h5, h6 {
     flex-grow: 0;
     flex-shrink: 0;
     overflow-y: hidden;
+    /* transition: opacity 0.3s ease; */
 }
+
+.about_container {
+    transition: opacity 0.15s ease;
+    opacity: 0;
+}
+    
+.about_container.visible {
+    transition: opacity 0.15s ease;
+    opacity: 1;
+}
+
+.about_container.hidden {
+    transition: opacity 0.15s ease;
+    opacity: 0;
+}
+
+
+
 
 .ag_Container {
     /* border: 1px solid black; */
