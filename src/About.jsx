@@ -1,12 +1,12 @@
 import './About.css'
 
-function About ({title, subTilte, description, isVisible }) {
+function About ({title, subTitle, description, isVisible }) {
     return(
     //    <div className="about_container"> 
        <div className={`about_container ${isVisible ? 'visible':'hidden'}`}> 
             <div className="about_title">{title}</div>
             <hr className='about_seperator'></hr>
-            <div>{subTilte}</div>
+            <div>{subTitle}</div>
             <div className="about_text">
                 {description}
             </div>

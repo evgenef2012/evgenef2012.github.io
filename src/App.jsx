@@ -51,6 +51,17 @@ function App() {
       setAboutVisible(true);
     }, 100);
   };
+  
+  const handleThumbHoverProd = (projectIndex) => {
+    if (hoverTimeOutRef.current) {
+      clearTimeout(hoverTimeOutRef.current);
+    }
+
+    hoverTimeOutRef.current = setTimeout(() => {
+      setCurrentInfo(info[projectIndex + 7]);
+      setAboutVisible(true);
+    }, 100);
+  };
 
   const handleThumbLeave = () => {
     if (leaveTimeOutRef.current) {
@@ -61,12 +72,21 @@ function App() {
       if (view === "arch_gallery") {
         setAboutVisible(false);
       }
+      if (view === "Med_gallery") {
+        setAboutVisible(false);
+      }
     }, 100);
   };
 
   const handleThumbClick = (projectIndex) => {
     setCurrentInfo(info[projectIndex + 1]);
     setView(`pr_0${projectIndex + 1}_gallery`);
+    setAboutVisible(true);
+  };
+  
+  const handleThumbClickProd = (projectIndex) => {
+    setCurrentInfo(info[projectIndex + 7]);
+    setView(`prod_0${projectIndex + 1}_gallery`);
     setAboutVisible(true);
   };
 
@@ -91,12 +111,7 @@ function App() {
               onThumbHover={handleThumbHover}
               onThumbLeave={handleThumbLeave}
               onThumbClick={handleThumbClick}
-              // onArchGllThumb_01_Click={() => handleViewChange("pr_01_gallery")}
-              // onArchGllThumb_02_Click={() => handleViewChange("pr_02_gallery")}
-              // onArchGllThumb_03_Click={() => handleViewChange("pr_03_gallery")}
-              // onArchGllThumb_04_Click={() => handleViewChange("pr_04_gallery")}
-              // onArchGllThumb_05_Click={() => handleViewChange("pr_05_gallery")}
-              // onArchGllThumb_06_Click={() => handleViewChange("pr_06_gallery")}
+              onBackClick={() => handleViewChange("main")}
             />
           ) : view === "pr_01_gallery" ? (
             <Arch_Project_01
@@ -124,24 +139,10 @@ function App() {
             />
           ) : view === "Med_gallery" ? (
             <ProdGallery
-              onProdGllThumb_01_Click={() =>
-                handleViewChange("prod_01_gallery")
-              }
-              onProdGllThumb_02_Click={() =>
-                handleViewChange("prod_02_gallery")
-              }
-              onProdGllThumb_03_Click={() =>
-                handleViewChange("prod_03_gallery")
-              }
-              onProdGllThumb_04_Click={() =>
-                handleViewChange("prod_04_gallery")
-              }
-              onProdGllThumb_05_Click={() =>
-                handleViewChange("prod_05_gallery")
-              }
-              onProdGllThumb_06_Click={() =>
-                handleViewChange("prod_06_gallery")
-              }
+              onThumbHover={handleThumbHoverProd}
+              onThumbLeave={handleThumbLeave}
+              onThumbClick={handleThumbClickProd}
+              onBackClick={() => handleViewChange("main")}
             />
           ) : view === "prod_01_gallery" ? (
             <Prod_Project_01

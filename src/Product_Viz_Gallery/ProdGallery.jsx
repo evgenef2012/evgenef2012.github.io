@@ -3,35 +3,61 @@ import { ProdThumbData } from "./ProdThumbData.js";
 import "../ArchGallery.css";
 
 function ProdGallery({
-  onProdGllThumb_01_Click,
-  onProdGllThumb_02_Click,
-  onProdGllThumb_03_Click,
-  onProdGllThumb_04_Click,
-  onProdGllThumb_05_Click,
-  onProdGllThumb_06_Click,
+  onThumbHover,
+  onThumbLeave,
+  onThumbClick,
+  onBackClick
 }) {
   return (
     <div className="ag_Container">
-      <div className="ag_thumb">
-        <ProdGllThumb onClick={onProdGllThumb_01_Click} {...ProdThumbData[0]} />
+      <div 
+        className="ag_thumb" 
+        onMouseEnter={() => onThumbHover(0)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ProdGllThumb onClick={() => {onThumbClick(0);}} {...ProdThumbData[0]} />
       </div>
-      <div className="ag_thumb">
-        <ProdGllThumb onClick={onProdGllThumb_02_Click} {...ProdThumbData[1]} />
+      <div 
+        className="ag_thumb"
+        onMouseEnter={() => onThumbHover(1)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ProdGllThumb onClick={() => {onThumbClick(1);}} {...ProdThumbData[1]} />
       </div>
-      <div className="ag_thumb">
-        <ProdGllThumb onClick={onProdGllThumb_03_Click} {...ProdThumbData[2]} />
+      <div 
+        className="ag_thumb"
+        onMouseEnter={() => onThumbHover(2)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ProdGllThumb onClick={() => {onThumbClick(2);}} {...ProdThumbData[2]} />
       </div>
-      <div className="ag_thumb">
-        <ProdGllThumb onClick={onProdGllThumb_04_Click} {...ProdThumbData[3]} />
+      <div 
+        className="ag_thumb"
+        onMouseEnter={() => onThumbHover(3)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ProdGllThumb onClick={() => {onThumbClick(3);}} {...ProdThumbData[3]} />
       </div>
-      <div className="ag_thumb">
-        <ProdGllThumb onClick={onProdGllThumb_05_Click} {...ProdThumbData[4]} />
+      <div 
+        className="ag_thumb"
+        onMouseEnter={() => onThumbHover(4)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ProdGllThumb onClick={() => {onThumbClick(4);}} {...ProdThumbData[4]} />
       </div>
-      <div className="ag_thumb">
-        <ProdGllThumb onClick={onProdGllThumb_06_Click} {...ProdThumbData[5]} />
+      <div 
+        className="ag_thumb"
+        onMouseEnter={() => onThumbHover(5)}
+        onMouseLeave={onThumbLeave}
+      >
+        <ProdGllThumb onClick={() => {onThumbClick(5);}} {...ProdThumbData[5]} />
+      </div>
+      <div className="agp_back_button" onClick={onBackClick}>
+        BACK
       </div>
     </div>
   );
 }
 
 export default ProdGallery;
+  
