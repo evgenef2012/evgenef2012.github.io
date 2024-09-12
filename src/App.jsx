@@ -21,10 +21,10 @@ import { info } from "./Info.js";
 // import ArImage from './Arch_Gallery/ArchImages/Arabov_C_01_Day_Opened.jpg';
 import "./App.css";
 
-
 function App() {
   const [view, setView] = useState("main");
   const [aboutVisible, setAboutVisible] = useState(false);
+  
   const [currentInfo, setCurrentInfo] = useState(info[0]);
 
   const hoverTimeOutRef = useRef(null);
@@ -41,6 +41,11 @@ function App() {
     setCurrentInfo(info[0]);
   };
 
+  const toggleContactVisible = () => {
+    setAboutVisible(!aboutVisible);
+    setCurrentInfo(info[13]);
+  };
+
   const handleThumbHover = (projectIndex) => {
     if (hoverTimeOutRef.current) {
       clearTimeout(hoverTimeOutRef.current);
@@ -49,9 +54,9 @@ function App() {
     hoverTimeOutRef.current = setTimeout(() => {
       setCurrentInfo(info[projectIndex + 1]);
       setAboutVisible(true);
-    }, 100);
+      }, 100);
   };
-  
+
   const handleThumbHoverProd = (projectIndex) => {
     if (hoverTimeOutRef.current) {
       clearTimeout(hoverTimeOutRef.current);
@@ -60,7 +65,7 @@ function App() {
     hoverTimeOutRef.current = setTimeout(() => {
       setCurrentInfo(info[projectIndex + 7]);
       setAboutVisible(true);
-    }, 100);
+      }, 100);
   };
 
   const handleThumbLeave = () => {
@@ -71,10 +76,10 @@ function App() {
     leaveTimeOutRef.current = setTimeout(() => {
       if (view === "arch_gallery") {
         setAboutVisible(false);
-      }
+        }
       if (view === "Med_gallery") {
         setAboutVisible(false);
-      }
+        }
     }, 100);
   };
 
@@ -83,7 +88,7 @@ function App() {
     setView(`pr_0${projectIndex + 1}_gallery`);
     setAboutVisible(true);
   };
-  
+
   const handleThumbClickProd = (projectIndex) => {
     setCurrentInfo(info[projectIndex + 7]);
     setView(`prod_0${projectIndex + 1}_gallery`);
@@ -97,6 +102,9 @@ function App() {
           <Header
             onHomeClick={() => handleViewChange("main")}
             onAboutClick={toggleAboutVisible}
+            onArchClick={() => handleViewChange("arch_gallery")}
+            onProdClick={() => handleViewChange("Med_gallery")}
+            onContactClick={toggleContactVisible}
           />
           <Footer />
         </div>

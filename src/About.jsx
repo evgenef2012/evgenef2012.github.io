@@ -7,8 +7,8 @@ function About ({title, subTitle, description, isVisible }) {
             <div className="about_title">{title}</div>
             <hr className='about_seperator'></hr>
             <div>{subTitle}</div>
-            <div className="about_text">
-                {description}
+            <div className="about_text" >
+                <div dangerouslySetInnerHTML={{ __html: description }}></div>
             </div>
         </div>    
     );
