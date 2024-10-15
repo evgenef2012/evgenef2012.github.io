@@ -24,7 +24,7 @@ import "./App.css";
 function App() {
   const [view, setView] = useState("main");
   const [aboutVisible, setAboutVisible] = useState(false);
-  
+
   const [currentInfo, setCurrentInfo] = useState(info[0]);
 
   const hoverTimeOutRef = useRef(null);
@@ -33,16 +33,15 @@ function App() {
   const handleViewChange = (newView) => {
     setView(newView);
     setAboutVisible(false);
-    // setCurrentInfo(info[0]);
   };
 
   const toggleAboutVisible = () => {
-    setAboutVisible(!aboutVisible);
+    setAboutVisible(true);
     setCurrentInfo(info[0]);
   };
 
   const toggleContactVisible = () => {
-    setAboutVisible(!aboutVisible);
+    setAboutVisible(true);
     setCurrentInfo(info[13]);
   };
 
@@ -54,7 +53,7 @@ function App() {
     hoverTimeOutRef.current = setTimeout(() => {
       setCurrentInfo(info[projectIndex + 1]);
       setAboutVisible(true);
-      }, 100);
+    }, 100);
   };
 
   const handleThumbHoverProd = (projectIndex) => {
@@ -65,7 +64,7 @@ function App() {
     hoverTimeOutRef.current = setTimeout(() => {
       setCurrentInfo(info[projectIndex + 7]);
       setAboutVisible(true);
-      }, 100);
+    }, 100);
   };
 
   const handleThumbLeave = () => {
@@ -76,10 +75,10 @@ function App() {
     leaveTimeOutRef.current = setTimeout(() => {
       if (view === "arch_gallery") {
         setAboutVisible(false);
-        }
+      }
       if (view === "Med_gallery") {
         setAboutVisible(false);
-        }
+      }
     }, 100);
   };
 

@@ -135,22 +135,41 @@ h6 {
   padding-right: 3rem;
   display: flex;
   flex-grow: 1;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
   max-width: 1200px;
   overflow-y: hidden;
 }
 
+.ag_thumbs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 0.3rem;
+}
+
 .ag_thumb {
   /* border: 1px solid black; */
-  width: 150px;
-  height: calc(100% - 1.35rem);
+  width: 160px;
+  height: 95vh;
+  /* height: calc(100% - 3rem); */
   margin-left: 1px;
   margin-right: 1px;
   overflow: hidden;
   position: relative;
-  /* clip-path:polygon(0% 0%, 100% 0%, 100% 95%, 0% 95%); */
+}
+
+.ag_back_button {
+  cursor: pointer;
+  align-self: flex-start;
+  padding-left: 0rem;
+}
+
+.agp_back_button {
+  cursor: pointer;
+  align-self: flex-start;
+  padding-top: 2.6rem;
 }
 
 .arch_gl_thumb {
@@ -187,7 +206,7 @@ h6 {
   justify-content: center;
   flex-grow: 1;
   max-width: 100%;
-  max-width: 974px;
+  /* max-width: 974px; */
   max-height: 75vh;
   /* overflow: hidden; */
 }
@@ -199,6 +218,7 @@ h6 {
   height: 100%;
   object-fit: scale-down;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .agp_thumbs_container {
@@ -219,6 +239,7 @@ h6 {
   height: 110px;
   width: 160px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .agp_thumb_image {
@@ -229,10 +250,69 @@ h6 {
   overflow: hidden;
 }
 
-.agp_back_button {
-    cursor: pointer; 
+.enlargedImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
+.enlargedImageContent img {
+  max-width: 80%;
+  max-height: 950px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.enlargedImageContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prevButton,
+.nextButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 35px;
+  height: 100px;
+  line-height: 1;
+  background-color: hsla(15, 40%, 98%, 0.8);
+  /* border: 1px solid black; */
+  
+  cursor: pointer;
+  
+}
+
+.prevButton {
+  left: 50px;
+}
+
+.nextButton {
+  right: 50px;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  background-color: hsla(15, 40%, 98%, 0.9);
+}
+
+.arrowButtonIcon {
+  /* border: 1px solid black; */
+  font-size: 50px;
+  padding-bottom: 5px;
+  color: #54504c;
+}
+  
 
 .footer {
   position: fixed;
@@ -347,8 +427,5 @@ h6 {
 }
 
 .shiftDown {
-  transform:  translateY(10px);
+  transform: translateY(10px);
 }
-
-
-

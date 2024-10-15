@@ -1,0 +1,59 @@
+import { useState } from 'react';
+import Arch_Gallery_Project_Thumb from './Arch_Gallery_Project_Thumb.jsx';
+import Arch_Gallery_Project_Image from './Arch_Gallery_Project_Image.jsx';
+import { ArchPrThumbData } from './ArchPrGalleryThumbData.js';
+import { ArchPrImgData } from './ArchPrGalleryImageData.js';
+import './Arch_Gallery_Project.css'
+
+function Arch_Project_01 ( {onBackClick} ) {
+    
+    const [currentImage, setCurrentImage] = useState(ArchPrImgData[0]);
+
+    const [isImgLarge, setIsImgLarge] = useState(false)
+
+    const handleThumbClick = (imageIndex) => {
+        setCurrentImage(ArchPrImgData[imageIndex])
+    };
+
+    function handleImgEnlargement () {
+        setIsImgLarge((enlarging) => !enlarging)
+    }
+    
+    return(
+        <div className='agp_container'>
+            <div className="agp_title">{ArchPrImgData[0].title}</div>
+            <div className="agp_main_image_container" onClick={handleImgEnlargement}>
+                <Arch_Gallery_Project_Image {...currentImage}/>
+            </div>
+            <div className="agp_thumbs_container">
+                {ArchPrThumbData.map((thumb, index) => (
+                    <div className="agp_thumb" key={index} onClick={() => handleThumbClick(index)}>
+                        <Arch_Gallery_Project_Thumb {...thumb}/>
+                    </div>   
+                ))}
+            </div>
+            <div className="agp_back_button" onClick={onBackClick}>
+               BACK 
+            </div>
+            {isImgLarge && (
+                <div className="enlargedImage" onClick={handleImgEnlargement}>
+                    <div className="enlargedImageContent">
+                        <img src={currentImage.image} alt={currentImage.title} />
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+}
+
+
+export default Arch_Project_01
+
+                    
+                  
+                
+                
+                
+        
+        
+        
