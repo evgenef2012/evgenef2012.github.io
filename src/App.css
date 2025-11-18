@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+
+:root {
+  /* Colors */
+  --color-bg: rgba(18, 21, 30, 1);
+  --color-header-bg: rgba(205, 202, 209, 1);
+  --color-font-dark: rgba(18, 21, 30, 1);
+  --color-font-dark-hover: rgb(117, 132, 145);
+  --color-font-subtitle: rgba(165, 178, 194, 1);
+  --color-font-title: rgba(206, 220, 236, 1);
+  --color-font-body: rgba(206, 220, 236, 1);
+  --color-accent: rgb(225, 135, 61);
+  --glow: rgb(255, 192, 82);
+
+  /* Typography scale */
+  --fs-header: clamp(14px, 1.389vw, 22px);
+  --fs-h2: clamp(36px, 4.444vw, 64px);
+  --fs-title: clamp(40px, 5.278vw, 76px);
+  --fs-subtitle: clamp(16px, 1.667vw, 24px);
+  --fs-body: clamp(14px, 1.111vw, 16px);
+  --fs-small: clamp(12px, 1vw, 14px);
+  --fs-xs: clamp(8px, 0.625vw, 10px);
+  --lh-tight: 1.2;
+  --lh-normal: 1.3125;
+
+  /* Global spacing scale (fluid) */
+  --gap-xxxs: clamp(2px, 0.3vw, 4px);
+  --gap-xxs: clamp(4px, 0.6vw, 8px);
+  --gap-xs: clamp(6px, 0.8vw, 12px);
+  --gap-sm: clamp(10px, 1.1vw, 16px);
+  --gap-md: clamp(14px, 1.6vw, 24px);
+  --gap-lg: clamp(20px, 2.2vw, 32px);
+  --gap-xl: clamp(28px, 3.3vw, 48px);
+  --gap-xxl: clamp(36px, 4.5vw, 64px);
+
+  /* negative mirrors (fluid) */
+  --gap-n-xxxs: calc(-1 * var(--gap-xxxs));
+  --gap-n-xxs: calc(-1 * var(--gap-xxs));
+  --gap-n-xs: calc(-1 * var(--gap-xs));
+  --gap-n-sm: calc(-1 * var(--gap-sm));
+  --gap-n-md: calc(-1 * var(--gap-md));
+  --gap-n-lg: calc(-1 * var(--gap-lg));
+  --gap-n-xl: calc(-1 * var(--gap-xl));
+  --gap-n-xxl: calc(-1 * var(--gap-xxl));
+
+  /* Section paddings (top/bottom) */
+  --gap-section-y: clamp(64px, 8vw, 240px);
+
+  /* Section-specific semantic gaps */
+  /* About */
+  --gap-about-title-subtitle: clamp(8px, 0.764vw, 11px);
+  --gap-about-subtitle-body: clamp(24px, 2.639vw, 38px);
+  --gap-about-paragraph: clamp(16px, 1.667vw, 24px);
+
+  /* Skills */
+  --gap-skills-title-to-technical: clamp(10px, 0.9vw, 11px);
+  --gap-skills-heading-to-list: clamp(2px, 0.6vw, 3px);
+  --gap-skills-tech-to-soft: clamp(18px, 2.29vw, 33px);
+  --gap-skills-list-to-projects: clamp(14px, 2.08vw, 33px);
+  --gap-projects-title-to-grid: clamp(0px, 0.4vw, 8px);
+  --gap-projects-row: clamp(8px, 1.2vw, 12px);
+  --gap-projects-col: clamp(24px, 2.08vw, 24px);
+
+  /* Projects ➜ Experience join */
+  --gap-after-projects: clamp(8px, 1vw, 16px);
+
+  /* Experience */
+  --gap-experience-items: clamp(12px, 2vw, 32px);
+  --gap-experience-bullets: clamp(6px, 1.2vw, 8px);
+
+  /* Layout */
+  --header-h: 60px;
+  --container-max: 554px;
+  --hero-max: 900px;
+  --headline-offset: clamp(56px, 12vw, 90px);
+
+  /* Mobile gutter */
+  --gutter-mobile: clamp(16px, 5vw, 24px);
+
+  /* Shared pill width */
+  --pill-w: clamp(196px, 21vw, 280px);
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  background: var(--color-bg);
+  color: var(--color-font-body);
+  padding-top: var(--header-h);
+}
+
+body.modal-open {
+  overflow: hidden;
+  padding-right: var(--scrollbar-w, 0px);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.about-title,
+.skills-title,
+.experience-title,
+.contact-title {
+  scroll-margin-top: calc(var(--header-h) + var(--headline-offset));
+}
+
+.hero {
+  scroll-margin-top: var(--header-h);
+}
+
+.container {
+  width: min(var(--container-max), 92vw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  padding: var(--gap-section-y) 0;
+}
+
+.hero {
+  min-height: calc(100vh - var(--header-h));
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero .hero-block {
+  width: max-content;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero .container {
+  width: min(var(--hero-max), 92vw);
+}
+
+.eyebrow {
+  color: var(--color-font-subtitle);
+  margin: 0 0 var(--gap-xxxs);
+  font-weight: 300;
+  font-size: var(--fs-subtitle);
+  line-height: var(--lh-tight);
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  margin: 0 0 var(--gap-xxs);
+  font-weight: 450;
+  font-size: var(--fs-title);
+  line-height: var(--lh-tight);
+  letter-spacing: 0.033em;
+  color: var(--color-font-title);
+}
+
+.subtitle {
+  color: var(--color-font-subtitle);
+  margin: 0 0 var(--gap-md);
+  font-weight: 300;
+  font-size: var(--fs-subtitle);
+  line-height: var(--lh-tight);
+  letter-spacing: 0.15em;
+}
+
+h2 {
+  margin: 0 0 var(--gap-xs);
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--color-font-title);
+}
+
+.muted {
+  color: var(--color-font-subtitle);
+  margin: 0 0 var(--gap-sm);
+}
+
+.cta-row {
+  display: inline-flex;
+  gap: var(--gap-md);
+  justify-content: center;
+}
+
+/* -------------------- MEDIA QUERIES (cleaned) -------------------- */
+
+/* XS phones */
+@media (max-width: 360px) {
+  .hero .cta-row {
+    gap: var(--gap-xxs);
+  }
+  .hero .btn {
+    --btn-fs: clamp(11px, 3vw, 15px);
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  :root {
+    --header-h: 48px;
+  }
+}
+
+/* Phones & small tablets */
+@media (max-width: 600px) {
+  :root {
+    --gap-section-y: clamp(32px, 15vh, 256px);
+    --contact-anchor-room: clamp(56px, 10vh, 160px);
+  }
+
+  .contact-section {
+    padding-bottom: calc(var(--gap-section-y) + var(--contact-anchor-room));
+  }
+
+  #about.about-title {
+    scroll-margin-top: 35vw;
+  }
+
+  #skills.skills-title {
+    scroll-margin-top: 20vw;
+  }
+
+  .hero .cta-row {
+    display: flex;
+    gap: var(--gap-xs);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero .btn {
+    width: calc((100% - var(--gap-xs)) / 2);
+    height: calc((100% - var(--gap-xs)) / 2);
+    box-sizing: border-box;
+    --btn-fs: clamp(11.5px, 2.6vw, 15px);
+    padding-inline: clamp(0.85em, 2.8vw, 1.2em);
+    padding-block: clamp(0.56em, 1.8vw, 0.75em);
+    --btn-ls: -0.03em;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-row {
+    gap: var(--gap-sm);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1280px) {
+  :root {
+    --gap-section-y: clamp(32px, 20vh, 256px);
+    --contact-anchor-room: clamp(56px, 10vh, 160px);
+  }
+
+  .contact-section {
+    padding-bottom: calc(var(--gap-section-y) + var(--contact-anchor-room));
+  }
+
+  .hero .cta-row {
+    font-size: var(--fs-subtitle);
+    width: var(--pill-w);
+    margin-inline: auto;
+    display: flex;
+    gap: var(--gap-sm);
+  }
+  .hero .btn {
+    width: calc((100% - var(--gap-sm)) / 2.05);
+    --btn-fs: calc(var(--fs-subtitle) * 0.75);
+    --btn-ls: -0.02em;
+    line-height: 1.1;
+    padding-inline: 1.1em;
+    padding-block: 0.58em;
+    height: clamp(30px, calc(var(--btn-fs) * 2.65), 44px);
+  }
+
+  #about.about-title {
+    scroll-margin-top: 45vw;
+  }
+
+  #skills.skills-title {
+    scroll-margin-top: 25vw;
+  }
+
+  #contact.contact-title {
+    scroll-margin-top: var(--header-h);
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  :root {
+    --gap-section-y: 240px;
+  }
+}
+
+/* -------------------- DEBUG (toggle with body.debug) -------------------- */
+body.debug .section {
+  position: relative;
+  outline: 1px dashed rgba(255, 255, 255, 0.35);
+  outline-offset: -1px;
+}
+body.debug .section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+body.debug .container {
+  outline: 1px solid rgba(255, 255, 255, 0.22);
+}
+body.debug .hero {
+  outline: 1px solid rgba(0, 255, 255, 0.35);
+}

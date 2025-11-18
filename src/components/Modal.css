@@ -1,0 +1,87 @@
+:root {
+  --overlay-bg: rgba(5, 5, 10, 0.85);
+  --modal-bg: var(--color-bg);
+  --modal-pad: var(--gap-lg);
+  --modal-gap: var(--gap-md);
+  --modal-radius: clamp(2px, 0.4vw, 4px);
+  --modal-max-w: clamp(280px, 60vw, 556px);
+  --modal-title-fs: var(--fs-body);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg);
+  display: grid;
+  place-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: var(--modal-bg);
+  border: 1px solid color-mix(in oklab, var(--color-accent) 35%, transparent);
+  border-radius: var(--modal-radius);
+  padding: var(--modal-pad);
+  width: min(92vw, var(--modal-max-w));
+  color: var(--color-font-body);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  display: grid;
+  gap: 0;
+}
+
+.modal-title {
+  margin: 0;
+  text-align: center;
+  font-size: var(--modal-title-fs);
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  color: var(--color-font-title);
+  margin: 0 0 var(--gap-lg);
+}
+
+.modal-body {
+  display: grid;
+  gap: 0;
+  justify-items: center;
+}
+
+.modal a {
+  color: var(--color-font-title);
+  font-size: var(--fs-small);
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  text-underline-offset: 4px;
+  margin: 0 0 var(--gap-xs);
+}
+
+.modal .btn.modal-close-action {
+  margin-top: var(--gap-lg);
+  font-size: var(--fs-small);
+  border: 1px solid var(--color-accent);
+  transition: border 160ms ease;
+}
+
+.btn.modal-close-action:hover,
+.btn.modal-close-action:focus-visible,
+.btn.modal-close-action:active {
+  border: 1px solid var(--glow);
+  box-shadow: 0 0 2px var(--glow);
+}
+
+.modal a:hover {
+  color: var(--color-accent);
+}
+
+.modal-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: 0;
+  color: var(--color-font-title);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}

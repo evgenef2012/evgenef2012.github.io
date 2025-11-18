@@ -1,0 +1,42 @@
+.about-title{
+  margin: 0 0 var(--gap-md);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+  color: var(--color-font-title);
+  text-align: center;
+}
+
+.about-subtitle{
+  margin: 0 0 var(--gap-xs);
+  font-weight: 300;
+  font-size: var(--fs-subtitle);
+  line-height: var(--lh-tight);
+  letter-spacing: 0.10em;
+  color: var(--color-font-subtitle);
+  text-align: center;
+}
+
+.about-body{
+  text-align: left;
+}
+
+.about-body p{
+  margin: 0 0 var(--gap-sm);
+  font-weight: 300;
+  font-size: var(--fs-body);
+  line-height: 1.3125;
+  letter-spacing: 0.04em;
+  color: var(--color-font-body);
+}
+
+.about-body p:last-child{
+  margin-bottom: 0;
+}
+
+.about {
+  --section-nav-gap: calc(var(--gap-xl)); 
+}
+
+.about .section-nav { --nav-chev-offset-x: 2ch; }

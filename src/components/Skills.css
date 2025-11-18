@@ -1,0 +1,112 @@
+.skills-section {
+  --projects-top-gap: var(--gap-skills-list-to-projects);
+  --projects-title-gap: 0px;
+  --projects-col-gap: var(--gap-projects-col);
+  --projects-row-gap: var(--gap-projects-row);
+  padding-block-end: 0;
+}
+
+.skills-title {
+  margin: 0 0 var(--gap-md);
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  color: var(--color-font-title);
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.projects {
+  margin-top: var(--projects-top-gap);
+  display: grid;
+  gap: var(--gap-sm);
+}
+
+.projects-title {
+  color: var(--color-font-subtitle);
+  font-size: var(--fs-subtitle);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: var(--lh-tight);
+  text-align: center;
+  margin: 0 0 var(--gap-xxs);
+}
+
+.projects-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: center;
+  column-gap: var(--projects-col-gap);
+  row-gap: var(--projects-row-gap);
+}
+
+.projects-row .btn {
+  --btn-w: clamp(118px, 28vw, 170px);
+  --btn-h: calc(var(--btn-w) * 0.235);
+  --btn-fs: clamp(11px, 2.2vw, 16px);
+  --btn-ls: -0.03em;
+}
+
+.modal:has(.game-embed--xo) {
+  --modal-max-w: 556px;
+  padding: 0;
+  overflow: hidden;
+  height: 81dvh;
+}
+
+.modal-overlay:has(.modal .game-embed--xo) {
+  padding-bottom: calc(var(--gap-xxl) * 2);
+}
+
+.modal:has(.game-embed--xo) .modal-title {
+  display: none;
+}
+
+.game-embed {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.game-frame {
+  display: block;
+  width: 100%;
+  height: min(90dvh, 700px);
+  border: 0;
+  border-radius: var(--modal-radius);
+}
+
+.modal:has(.game-embed--xo) .modal-close-action {
+  position: absolute !important;
+  left: 50dvw;
+  bottom: 8dvh;
+  transform: translateX(-50%);
+  margin: 0;
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .projects-row .btn {
+    --btn-w: clamp(85px, 30dvw, 160px);
+    --btn-h: calc(var(--btn-w) * 0.235);
+    --btn-fs: clamp(10px, 2.3dvw, 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-row {
+    justify-content: flex-start;
+    padding-inline-end: max(env(safe-area-inset-right), clamp(16px, 5vw, 24px));
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal:has(.game-frame) {
+    --modal-max-w: 100vw;
+  }
+  .game-frame {
+    height: 100dvh;
+    border-radius: 0;
+  }
+}

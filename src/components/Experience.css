@@ -1,0 +1,101 @@
+.experience-section {
+  --exp-item-gap: var(--gap-experience-items);
+  --exp-bullet-gap: var(--gap-experience-bullets);
+  --exp-bullet-size: 8px;
+  --exp-bullet-text-gap: 3px;
+  --exp-bullet-baseline-nudge: 0px;
+  padding-top: var(--gap-xl);
+}
+
+.experience-title {
+  margin: 0 0 var(--gap-sm);
+  font-size: var(--fs-subtitle);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: var(--lh-tight);
+  color: var(--color-font-subtitle);
+  text-align: center;
+}
+
+.experience-list {
+  display: grid;
+  gap: var(--gap-md);
+  text-align: left;
+}
+
+.experience-role {
+  font-weight: 700;
+  font-size: var(--fs-body);
+  line-height: calc(21 / 16);
+  letter-spacing: 0;
+  color: var(--color-font-body);
+  margin-bottom: var(--gap-xxs);
+}
+
+.experience-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--gap-xxxs);
+}
+
+.experience-bullets li {
+  position: relative;
+  text-align: left;
+  padding-left: calc(var(--exp-bullet-size) + var(--exp-bullet-text-gap));
+  font-weight: 300;
+  font-size: var(--fs-small);
+  line-height: calc(21 / 16);
+  letter-spacing: 0.04em;
+  color: var(--color-font-body);
+}
+
+.experience-bullets li::before {
+  content: "";
+  width: var(--exp-bullet-size);
+  height: var(--exp-bullet-size);
+  background: var(--color-font-title);
+  position: absolute;
+  left: 0;
+  top: calc(1em + var(--exp-bullet-baseline-nudge));
+  transform: translateY(-100%);
+}
+
+.exp-sep {
+  display: inline-block;
+  color: var(--color-accent);
+  width: 0.2em;
+  height: 1em;
+  background: currentColor;
+  vertical-align: -0.12em;
+  margin-right: 0.35em;
+}
+
+.exp-line {
+  display: inline-block;
+  margin-left: 0;
+}
+
+.skills-block {
+  margin-top: var(--gap-md);
+  text-align: left;
+}
+
+.skills-block .experience-inline-text {
+  margin: var(--gap-xxs) 0 0 0;
+  color: var(--color-font-body);
+  font-weight: 300;
+  font-size: var(--fs-small);
+  line-height: calc(21 / 16);
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.experience {
+  --section-nav-gap: calc(var(--gap-xl));
+}
+
+.experience .section-nav {
+  --nav-chev-offset-x: 1ch;
+}
