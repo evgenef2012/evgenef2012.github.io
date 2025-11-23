@@ -35,7 +35,7 @@ export default function Footer() {
           {/* LinkedIn */}
           <a
             className="footer-icon-link"
-            href="https://www.linkedin.com/in/REPLACE_WITH_YOUR_PROFILE"
+            href="https://www.linkedin.com/in/evgeni-nefedov-255646392/"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn profile"

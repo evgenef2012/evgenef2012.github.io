@@ -12,6 +12,7 @@ export default function Skills() {
   const [showSTR, setShowSTR] = useState(false);
   const [showAUTO, setShowAUTO] = useState(false);
   const [showXO, setShowXO] = useState(false);
+  const [showTrivia, setShowTrivia] = useState(false);
 
   const stpUrl = "/STP-Superpharm-Accessibility.pdf";
   const stdUrl = "/STD-Superpharm-Accessibility.pdf";
@@ -36,6 +37,7 @@ export default function Skills() {
               const isSTR = /test-?res[au]lts?|str/i.test(label);
               const isAUTO = /auto(matic)?\s*testing/i.test(label);
               const isXO = /xo\s*game/i.test(label);
+              const isTrivia = /trivia\s*game/i.test(label);
 
               if (isSTP) {
                 return (
@@ -106,6 +108,21 @@ export default function Skills() {
                     onClick={(e) => {
                       e.preventDefault();
                       setShowXO(true);
+                    }}
+                    variant="primary"
+                    size="md"
+                  />
+                );
+              }
+              if (isTrivia) {
+                return (
+                  <Button
+                    key={i}
+                    label={label}
+                    to="#projects-trivia"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowTrivia(true);
                     }}
                     variant="primary"
                     size="md"
@@ -220,6 +237,22 @@ export default function Skills() {
         <button
           className="btn btn--outline modal-close-action"
           onClick={() => setShowXO(false)}
+        >
+          Close
+        </button>
+      </Modal>
+
+      {/* Trivia GAME Modal */}
+      <Modal
+        open={showTrivia}
+        onClose={() => setShowTrivia(false)}
+        title="Trivia Game"
+      >
+        <p>Work In Progress</p>
+
+        <button
+          className="btn btn--outline modal-close-action"
+          onClick={() => setShowTrivia(false)}
         >
           Close
         </button>
