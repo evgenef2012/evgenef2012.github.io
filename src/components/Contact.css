@@ -10,7 +10,7 @@
 }
 
 .section.contact-section {
-  padding-bottom: var(--gap-xl);
+  padding-bottom: var(--gap-xs);
 }
 
 /* Section layout */
@@ -98,7 +98,7 @@
 .contact-actions {
   display: grid;
   justify-content: center;
-  margin-top: var(--gap-n-sm);
+  margin-top: var(--gap-n-md); 
 }
 
 .contact-actions .btn {
@@ -152,6 +152,26 @@
 .contact .section-nav {
   --nav-chev-offset-x: 3.8ch;
   --nav-chev-offset-y: -0.1em;
+}
+
+.contact-status {
+  margin: 0;
+  font-size: var(--fs-small);
+}
+
+.contact-status-region {
+  min-height: 1.4em; /* enough for one line of text */
+  margin-top: var(--gap-n-md); /* distance from Message field */
+  margin-bottom: 0; /* distance to Submit button */
+  align-items: center; /* vertically center the text */
+}
+
+.contact-status--success {
+  color: var(--color-accent-hover);
+}
+
+.contact-status--error {
+  color: #ff7676;
 }
 
 @media (max-width: 600px) {

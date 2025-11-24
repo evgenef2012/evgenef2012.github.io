@@ -1,5 +1,5 @@
 .site-footer {
-  padding: var(--gap-lg) 0 var(--gap-xl);
+  padding: var(--gap-md) 0 var(--gap-xl);
   color: var(--color-font-subtitle);
   font-size: var(--fs-xs);
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Contact.css";
 import Button from "./Button.jsx";
 import SectionNav from "./SectionNav.jsx";
@@ -11,6 +11,9 @@ export default function Contact() {
     hp: "",
   });
   const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState(null);
+
+  const FORM_ENDPOINT = "https://formspree.io/f/mdkvkrjq";
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -28,23 +31,48 @@ export default function Contact() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (ev) => {
+  const handleSubmit = async (ev) => {
     ev.preventDefault();
     if (!validate()) return;
+    if (values.hp) return; // honeypot: ignore bots
 
-    const to = "evge1983@gmail.com";
-    const subject = `Portfolio Contact: ${values.name}`;
-    const body =
-      `Name: ${values.name}\n` +
-      `Email: ${values.email}\n\n` +
-      `Message:\n${values.message}`;
+    setStatus("sending");
 
-    const mailto = `mailto:${encodeURIComponent(
-      to
-    )}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        }),
+      });
 
-    window.location.href = mailto;
+      if (res.ok) {
+        setStatus("success");
+        setValues({ name: "", email: "", message: "", hp: "" });
+        setErrors({});
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
   };
+
+  useEffect(() => {
+    if (status === "success" || status === "error") {
+      const timer = setTimeout(() => {
+        setStatus(null);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   return (
     <section className="section contact-section">
@@ -108,6 +136,19 @@ export default function Contact() {
               <em className="field-error">{errors.message}</em>
             )}
           </label>
+
+          <div className="contact-status-region" aria-live="polite">
+            {status === "success" && (
+              <p className="contact-status contact-status--success">
+                Thank you! Your message has been sent.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="contact-status contact-status--error">
+                Something went wrong. Please try again later.
+              </p>
+            )}
+          </div>
 
           <div className="contact-actions">
             <Button type="submit" label="Submit" variant="primary" size="md" />
